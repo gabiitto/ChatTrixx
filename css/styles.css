@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #85e6c0;
+    --secondary-color: #f7f4e8;
+    --background-color: #daf3ea;
+    --leter-color: #0b0b0d;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.settings img, 
+.new-conversation img {
+    width: 30px;
+    height: 30px;
+}
+
+.name-app {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--leter-color);
+}
