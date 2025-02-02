@@ -5,6 +5,14 @@
     --leter-color: #0b0b0d;
 }
 
+html, 
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -20,6 +28,10 @@ header {
     padding: 10px 20px;
 }
 
+#main-content {
+    flex: 1;
+}
+
 .settings img, 
 .new-conversation img {
     width: 30px;
@@ -30,4 +42,21 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: var(--leter-color);
+}
+
+#login-screen {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    padding: 20px 10px 20px 10px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
 }
