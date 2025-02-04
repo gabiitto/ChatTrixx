@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="ChatTrixx: Una plataforma de mensajería para conectar con amigos y familiares. Regístrate para empezar a chatear.">
     <title>ChatTrixx - España</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="assets/icons/logo.png" type="image/png">
@@ -11,32 +12,62 @@
 <body>
     <header>
         <div class="settings">
-            <img src="assets/icons/engranajes.png" alt="Abrir menú de ajustes">
+            <a href="#">
+                <button class="button-header">
+                    <img src="assets/icons/engranajes.png" alt="Abrir menú de ajustes">
+                </button>
+            </a>
         </div>
         <div class="name-app">ChatTrixx</div>
         <div class="new-conversation">
-            <img src="assets/icons/usuario.png" alt="Iniciar nueva conversación">
+            <a href="#">
+                <button class="button-header">
+                    <img src="assets/icons/usuario.png" alt="Iniciar nueva conversación">
+                </button>
+            </a>
+            
         </div>
     </header>
 
     <main id="main-content">
         <!-- login screen -->
-        <div id="login-screen">
-            <h2>Iniciar sesión</h2>
-            <input type="text" id="username" placeholder="Correo electrónico o usuario">
-            <input type="password" id="password" placeholder="Contraseña">
-            <button id="login-button">Iniciar sesión</button>
-        </div>
+        <article id="login-section">
+            <section id="login-screen" class="rotate" role="form">
+                <h2>Iniciar sesión</h2>
+
+                <label for="username">Correo electrónico o usuario</label>
+                <input type="text" id="username" placeholder="Correo electrónico o usuario" required>
+
+                <label for="password">Ingresa tu contraseña</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+
+                <button id="login-button" aria-label="Iniciar sesión.">Iniciar sesión</button>
+                <p>¿No tienes una cuenta? <a href="#" id="show-register" aria-label="Ir al formulario de registro.">Regístrate</a></p>
+            </section>
+        </article>
         <!-- register screen -->
-        <div class="register-screen">
-            <h2>Registrarse</h2>
-            <input type="text" id="username" placeholder="Correo electrónico o usuario">
-            <input type="password" id="password" placeholder="Contraseña">
-            <input type="password" id="password" placeholder="Repite tu contraseña">
-            <button id="register-button">Registrarse</button>
-        </div>
+        <article id="register-section">
+            <section id="register-screen" role="form">
+                <h2>Registrarse</h2>
+
+                <label for="register-username">Correo electrónico o usuario</label>
+                <input type="text" id="register-username" placeholder="Correo electrónico o usuario" required>
+                
+                <label for="password">Ingresa una contraseña válida</label>
+                <input type="password" id="register-password" placeholder="Ingresa una contraseña válida" required minlength="8">
+
+                <label for="register-password-repeat">Repite tu contraseña</label>
+                <input type="password" id="register-password-repeat" placeholder="Repite tu contraseña" required>
+                
+                <button id="register-button" aria-label="Registrarse.">Registrarse</button>
+            </section>
+        </article>
+
+        <section id="chats">
+
+        </section>
     </main>
-    
+
     <footer>
         <p>Esta aplicación tiene derechos reservados</p>
     </footer>
