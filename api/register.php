@@ -7,6 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['register-password'];
     $password_repeat = $_POST['register-password-repeat'];
 
+    if(strlen($password) < 8) {
+        echo "La contraseña debe tener mínimo 8 caracteres.";
+    } else {
+        echo "!Registro completado¡";
+    }
 
     // Validación de todos los campos
     if (empty($username) || empty($password) || empty($password_repeat)) {
@@ -58,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="text" name="register-username" id="register-username" placeholder="Correo electrónico o usuario" required>
 
     <label for="register-password">Contraseña</label>
-    <input type="password" name="register-password" id="register-password" placeholder="Contraseña" required>
+    <input type="password" name="register-password" id="register-password" placeholder="Contraseña" required minlength="8">
 
     <label for="register-password-repeat">Repite tu contraseña</label>
     <input type="password" name="register-password-repeat" id="register-password-repeat" placeholder="Repite tu contraseña" required>
